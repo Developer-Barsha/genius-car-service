@@ -1,15 +1,16 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
 import Experts from '../Experts/Experts';
 import Services from '../Services/Services';
 import './Home.css'
 
 const Home = () => {
     return (
-        <div>
-            <h2>This is our home</h2>
+        <>
+            <Banner></Banner>
             <Services></Services>
             <Experts></Experts>
-        </div>
+        </>
     );
 };
 
