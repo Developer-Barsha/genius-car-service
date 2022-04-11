@@ -1,18 +1,18 @@
-.experts-container{
+/* .experts-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
 /* make services responsive */
 
-@media only screen and (max-width:576px) {
+/* @media only screen and (max-width:576px) {
     .experts-container{
         grid-template-columns: repeat(1, 1fr);
     }
-}
+} */
 
-@media only screen and (min-width:577px) and (max-width:1100px) {
+/* @media only screen and (min-width:577px) and (max-width:1100px) {
     .experts-container{
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} */ 
