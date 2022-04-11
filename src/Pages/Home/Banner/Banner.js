@@ -1,4 +1,4 @@
-import { Carousel } from 'react-bootstrap';
+import { Carousel} from 'react-bootstrap';
 import React, { useState } from 'react';
 
 import banner1 from '../../../images/banner/banner1.jpg'
