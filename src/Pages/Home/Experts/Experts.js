@@ -19,7 +19,7 @@ const Experts = () => {
         { id: 6, name: 'Kim Jisoo', img: expert6 },
     ];
     return (
-        <div className='container my-4'>
+        <div className='container my-4' id='experts'>
             <h2 className='text-center text-primary'>Our Experts</h2>
             <div className="row">
                 {
