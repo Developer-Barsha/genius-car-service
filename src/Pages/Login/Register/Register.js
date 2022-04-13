@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css'
 
@@ -9,29 +9,24 @@ const Register = () => {
         navigate('/login');
     };
 
-    const nameRef=useRef('');
-    const emailRef=useRef('');
-    const passwordRef=useRef('');
-
     const handleRegister=event=>{
         event.preventDefault();
 
-        const name=nameRef.current.value;
-        const email=emailRef.current.value;
-        const password=passwordRef.current.value;
-
-        console.log(name, email, password);
+        const name=(event.target.name.value);
+        const email=(event.target.email.value);
+        const password=(event.target.password.value);
+        console.log(password,name, email);
     };
 
     return (
         <div className='register-form'>
             <h2 className='text-primary text-center mt-4 mb-3'>Register here</h2>
             <form onSubmit={handleRegister}>
-                <input type="text" ref={nameRef} name="name" id="1" placeholder='Your Name'/>
+                <input type="text" name="name" id="1" placeholder='Your Name'/>
 
-                <input type="email" ref={emailRef} name="email" id="2" placeholder='Email Address' required/>
+                <input type="email" name="email" id="2" placeholder='Email Address' required/>
                 
-                <input type="password" ref={passwordRef} name="password" id="3" placeholder='Password' required/>
+                <input type="password" name="password" id="3" placeholder='Password' required/>
                 
                 <input type="submit" value="Register" />
             </form>
