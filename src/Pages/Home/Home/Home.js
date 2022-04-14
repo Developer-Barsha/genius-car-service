@@ -6,11 +6,11 @@ import './Home.css'
 
 const Home = () => {
     return (
-        <>
+        <div>
             <Banner></Banner>
             <Services></Services>
             <Experts></Experts>
-        </>
+        </div>
     );
 };
 

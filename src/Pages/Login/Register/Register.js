@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import './Register.css'
 
 
 const Register = () => {
+    const [createUserWithEmailAndPassword,user,loading,error] = useCreateUserWithEmailAndPassword(auth);
+
     const navigate=useNavigate();
     const navigateLogin=()=>{
         navigate('/login');
@@ -15,8 +19,23 @@ const Register = () => {
         const name=(event.target.name.value);
         const email=(event.target.email.value);
         const password=(event.target.password.value);
-        console.log(password,name, email);
+        if(password.length<6){
+            alert('password should have 6 characters');
+            return;
+        }
+        createUserWithEmailAndPassword(email, password)
     };
+
+    
+    useEffect(() => {
+        if(user){
+            navigate('/');
+        }
+    }, [user])
+    
+    if(error){
+        alert(error.message);
+    }
 
     return (
         <div className='register-form'>
